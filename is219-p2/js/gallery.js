@@ -91,9 +91,14 @@ function fetchJSON(){
 	mRequest.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 		   // Typical action to be performed when the document is ready:
-		   document.getElementById("demo").innerHTML = mRequest.responseText;
+		mjson = JSON.parse(mRequest.responseText);
+		iterateJSON()
 		}
 	};
 	mRequest.open("GET", mUrl, true);
 	mRequest.send();
+}
+
+function iterateJSON(mJson){
+
 }
